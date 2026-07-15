@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --cor-fundo: #ededed;
+  --cor-fundo-produto: #ffffff;
+  --cor-primaria: #3483fa;
+  --cor-secundaria: #00a650;
+  --cor-texto: #333333;
+  --cor-texto-secundario: #777777;
+  --bordas: #e5e5e5;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+main {
+  background-color: var(--cor-fundo-produto);
+}
+
+#botao-compra {
+  background-color: var(--cor-primaria);
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+#destacado-verde {
+    color: var(--cor-secundaria);
+}
+
+#galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
