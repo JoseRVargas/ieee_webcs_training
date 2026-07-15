@@ -1,31 +1,55 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
 :root {
-  --cor-fundo: #ededed;
-  --cor-fundo-produto: #ffffff;
-  --cor-primaria: #3483fa;
-  --cor-secundaria: #00a650;
-  --cor-texto: #333333;
-  --cor-texto-secundario: #777777;
-  --bordas: #e5e5e5;
+    --cor-fundo: #ededed;
+    --cor-fundo-produto: #ffffff;
+    --cor-primaria: #3483fa;
+    --cor-secundaria: #00a650;
+    --cor-texto: #333333;
+    --cor-texto-secundario: #777777;
+    --cor-borda: #e5e5e5;
 }
 
 body {
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
 }
 
 main {
-  background-color: var(--cor-fundo-produto);
+    background-color: var(--cor-fundo-produto);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
-#botao-compra {
-  background-color: var(--cor-primaria);
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.secoes {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.botao-compra {
+    background-color: var(--cor-primaria);
 }
 
 a {
@@ -33,12 +57,43 @@ a {
     text-decoration: none;
 }
 
-#destacado-verde {
+.destacado-verde {
     color: var(--cor-secundaria);
 }
 
-#galeria {
+.galeria {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    min-height: 500px;
+}
+
+.galeria img {
+    display: block;
+    max-width: 100%;
+    max-height: 700px;
+    object-fit: contain;
+}
+
+.produto {
+    display: grid;
+    grid-template-columns: 35fr 37fr 28fr;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.produto > * {
+    min-width: 0;
+}
+
+button, select {
+    font: inherit;
+}
+
+.caracteristicas-produto ul {
+    list-style: disc;
+    padding: 15px 0 20px 20px;
+    margin: 0;
 }
