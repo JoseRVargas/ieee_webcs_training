@@ -44,12 +44,69 @@ img {
     gap: 20px;
     align-items: center;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 7px 0px;
     flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.condicao-produto {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.tag-mais-vendido {
+    background-color: #ff7732;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 5px 5px 5px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.ranking-produto {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 10px;
+}
+
+.descricao-ranking-produto {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+}
+
+.titulo-produto {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.avaliacao-produto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--cor-texto-secundario);
 }
 
 .botao-compra {
     background-color: var(--cor-primaria);
+}
+
+.preco-atual-produto {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--cor-texto);
+    margin-bottom: 5px;
+}
+
+.preco-antigo-produto {
+    font-size: 16px;
+    color: var(--cor-texto-secundario);
+    text-decoration: line-through;
+    margin-bottom: 10px;
 }
 
 a {
@@ -96,4 +153,71 @@ button, select {
     list-style: disc;
     padding: 15px 0 20px 20px;
     margin: 0;
+}
+
+.lista-expandido-separador {
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+}
+
+.tag-frete-compra {
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 5px 5px 5px;
+    border-radius: 4px;
+}
+
+.compra {
+    margin-top: 10px;
+}
+
+.add-carrinho-compra {
+    margin-top: 10px;
+}
+
+.botao-compra {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.botao-add-carrinho-compra {
+    background-color: #e3edfb;
+    color: var(--cor-primaria);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+svg {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    stroke: #ffffff;
+}
+
+.loja-compra {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.loja-compra img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
