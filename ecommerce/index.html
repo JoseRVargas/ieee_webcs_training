@@ -10,55 +10,107 @@
 
 <body>
     <nav aria-label="Navegação estrutural">
-        <div id="secoes">
-            <ul>
-                <li><a href="#">Celulares e Telefones</a></li>
-                <li><a href="#">Celulares e Smartphones</a></li>
-            </ul>
-        </div>
+        <ol class="secoes">
+            <li><a href="#">Voltar</a></li>
+            <li class="lista-expandido-separador">|</a></li>
+            <li><a href="#">Celulares e Telefones</a></li>
+            <li class="lista-expandido-separador">></li>
+            <li><a href="#">Celulares e Smartphones</a></li>
+        </ol>
     </nav>
     <main>
         <article class="produto">
             <section class="galeria-produto" aria-label="Galeria de imagens do produto">
                 <div class="galeria">
                     <img src="assets/images/cor-azul-marinho.png"
-                        alt="Smartphone Motorola Moto G06 - 128gb 12gb (4gb Ram + 8gb Ram Boost) E Camera 50mp Com Ai Bateria De 5200 Mah Tela 6.9 - Azul Marinho">
+                        alt="Parte traseira e frontal do Smartphone Motorola Moto G06 na cor Azul Marinho">
                 </div>
             </section>
             <section class="informacoes-produto" aria-label="Informações do produto">
-                <div id="loja-produto">
-
-                    <p><img src="assets/images/moto.png" alt="Logo da Motorola"><a href="#">Acesse a Loja
-                            Oficial da
-                            Motorola </a><img src="assets/images/check.svg" alt=""></p>
+                <div class="loja-produto">
+                    <img src="assets/images/moto.png" alt="Logo da Motorola">
+                    <p><a href="#">Acesse a Loja Oficial da
+                            Motorola </a></p>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink"
+                        class="ui-pdp-icon ui-seller-data-header__icon-verified" xmlns="http://www.w3.org/2000/svg"
+                        width="14" height="14" viewBox="0 0 14 14">
+                        <defs>
+                            <symbol id="verified_small">
+                                <g fill="none" fill-rule="evenodd">
+                                    <g fill="#3483FA">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M165.868 7.288l.403 1.44 1.441.405c.521.146.946.523 1.154 1.023.207.5.173 1.067-.092 1.54L168.041 13l.732 1.303c.265.472.3 1.04.093 1.54s-.633.878-1.154 1.024l-1.44.404-.405 1.441c-.146.521-.523.946-1.023 1.154-.5.207-1.068.173-1.54-.092L162 19.041l-1.303.732c-.472.265-1.04.3-1.54.093s-.878-.633-1.024-1.154l-.404-1.44-1.441-.405c-.521-.146-.946-.523-1.154-1.023-.207-.5-.173-1.068.092-1.54l.733-1.304-.732-1.304c-.265-.471-.3-1.039-.093-1.54.207-.5.633-.877 1.154-1.023l1.44-.405.405-1.44c.146-.521.523-.946 1.023-1.153.5-.207 1.067-.174 1.539.09l1.304.734 1.303-.732c.408-.23.89-.288 1.342-.162.45.127.832.427 1.062.835.07.122.124.252.162.388zm-1.718 3.332l-2.97 2.97-1.33-1.334c-.081-.083-.193-.13-.309-.127-.115-.002-.227.044-.307.127l-.617.615c-.083.08-.129.192-.126.307 0 .12.042.223.126.307l2.256 2.252c.08.083.192.129.308.127.115.002.227-.044.308-.127l3.894-3.888c.083-.08.129-.192.126-.308.002-.115-.043-.226-.126-.307l-.617-.615c-.08-.083-.192-.129-.307-.127-.117-.001-.228.045-.31.128z"
+                                                    transform="translate(-211 -54) translate(0 48) translate(56)">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </symbol>
+                        </defs>
+                        <use href="#verified_small"></use>
+                    </svg>
                 </div>
-                <p class="condicao-produto">Novo | + 50 mil vendidos</p>
+                <div class="condicao-like">
+                    <p class="condicao-produto">Novo | + 50 mil vendidos</p>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink"
+                        class="ui-pdp-icon ui-pdp-icon--bookmark ui-pdp-bookmark__icon-bookmark"
+                        xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                        <defs>
+                            <symbol id="bookmark">
+                                <path stroke="#3483FA"
+                                    d="M10.977 2.705C11.93 1.618 13.162 1 14.895 1c3.333 0 5.607 2.152 5.607 6.274 0 .08-.002.16-.005.24-.107 2.596-1.876 5.253-4.737 7.892a33.77 33.77 0 0 1-3.165 2.57 32.447 32.447 0 0 1-1.45.983l-.394.243-.394-.243-.009-.005-.021-.014-.08-.05a32.447 32.447 0 0 1-1.34-.914 33.77 33.77 0 0 1-3.165-2.57c-2.86-2.639-4.63-5.296-4.737-7.892A5.839 5.839 0 0 1 1 7.274C1 3.152 3.274 1 6.607 1c1.733 0 2.966.618 3.918 1.705.056.064.137.165.226.282.09-.117.17-.218.226-.282z">
+                                </path>
+                            </symbol>
+                        </defs>
+                        <g fill-rule="evenodd" stroke="#3483FA" fill="none" stroke-width="1.5px">
+                            <use href="#bookmark"></use>
+                        </g>
+                    </svg>
+                </div>
                 <div class="ranking-produto">
-                    <p>MAIS VENDIDO<span>4º em Celulares e Smartphones</span></p>
+                    <p>
+                        <span class="tag-mais-vendido">MAIS VENDIDO</span>
+                        <span class="descricao-ranking-produto"><a href="#">4º em Celulares e Smartphones</a></span>
+                    </p>
                 </div>
 
                 <div class="titulo-produto">
                     <h1>Smartphone Motorola Moto G06 - 128gb 12gb (4gb Ram + 8gb Ram Boost) E Camera 50mp Com Ai Bateria
-                        De
-                        5200
-                        Mah Tela 6.9 - Azul Marinho</h1>
+                        De 5200 Mah Tela 6.9 - Azul Marinho</h1>
                 </div>
                 <div class="avaliacao-produto">
-                    <p aria-label="Avaliação do produto: 4.9 de 5, baseada em 43.329 avaliações">4.9 <img
-                            src="assets/images/star-full.svg" alt="Estrela de avaliação"><span>(43329)</span></p>
+                    <p aria-label="Avaliação do produto: 4.9 de 5, baseada em 43.329 avaliações">4.9</p>
+                    <div class="estrelas-avaliacao-produto">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="ui-pdp-icon ui-pdp-icon--star-full" width="10" height="10" viewBox="0 0 10 10" fill="none"><defs><symbol id="poly_star_fill" viewBox="0 0 15 15"><path fill="#3483FA" stroke="#3483FA" d="M7.74084 11.6268L7.51188 11.5089L7.28292 11.6268L3.55019 13.5496L4.26041 9.49232L4.30649 9.22909L4.11324 9.04452L1.11415 6.1802L5.26845 5.58875L5.52703 5.55193L5.64452 5.31867L7.51188 1.61145L9.37924 5.31867L9.49673 5.55193L9.75531 5.58875L13.9096 6.1802L10.9105 9.04452L10.7173 9.22909L10.7633 9.49232L11.4736 13.5496L7.74084 11.6268Z"></path></symbol></defs><use href="#poly_star_fill"></use></svg>
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="ui-pdp-icon ui-pdp-icon--star-full" width="10" height="10" viewBox="0 0 10 10" fill="none"><defs><symbol id="poly_star_fill" viewBox="0 0 15 15"><path fill="#3483FA" stroke="#3483FA" d="M7.74084 11.6268L7.51188 11.5089L7.28292 11.6268L3.55019 13.5496L4.26041 9.49232L4.30649 9.22909L4.11324 9.04452L1.11415 6.1802L5.26845 5.58875L5.52703 5.55193L5.64452 5.31867L7.51188 1.61145L9.37924 5.31867L9.49673 5.55193L9.75531 5.58875L13.9096 6.1802L10.9105 9.04452L10.7173 9.22909L10.7633 9.49232L11.4736 13.5496L7.74084 11.6268Z"></path></symbol></defs><use href="#poly_star_fill"></use></svg>
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="ui-pdp-icon ui-pdp-icon--star-full" width="10" height="10" viewBox="0 0 10 10" fill="none"><defs><symbol id="poly_star_fill" viewBox="0 0 15 15"><path fill="#3483FA" stroke="#3483FA" d="M7.74084 11.6268L7.51188 11.5089L7.28292 11.6268L3.55019 13.5496L4.26041 9.49232L4.30649 9.22909L4.11324 9.04452L1.11415 6.1802L5.26845 5.58875L5.52703 5.55193L5.64452 5.31867L7.51188 1.61145L9.37924 5.31867L9.49673 5.55193L9.75531 5.58875L13.9096 6.1802L10.9105 9.04452L10.7173 9.22909L10.7633 9.49232L11.4736 13.5496L7.74084 11.6268Z"></path></symbol></defs><use href="#poly_star_fill"></use></svg>
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="ui-pdp-icon ui-pdp-icon--star-full" width="10" height="10" viewBox="0 0 10 10" fill="none"><defs><symbol id="poly_star_fill" viewBox="0 0 15 15"><path fill="#3483FA" stroke="#3483FA" d="M7.74084 11.6268L7.51188 11.5089L7.28292 11.6268L3.55019 13.5496L4.26041 9.49232L4.30649 9.22909L4.11324 9.04452L1.11415 6.1802L5.26845 5.58875L5.52703 5.55193L5.64452 5.31867L7.51188 1.61145L9.37924 5.31867L9.49673 5.55193L9.75531 5.58875L13.9096 6.1802L10.9105 9.04452L10.7173 9.22909L10.7633 9.49232L11.4736 13.5496L7.74084 11.6268Z"></path></symbol></defs><use href="#poly_star_fill"></use></svg>
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="ui-pdp-icon ui-pdp-icon--star-full" width="10" height="10" viewBox="0 0 10 10" fill="none"><defs><symbol id="poly_star_fill" viewBox="0 0 15 15"><path fill="#3483FA" stroke="#3483FA" d="M7.74084 11.6268L7.51188 11.5089L7.28292 11.6268L3.55019 13.5496L4.26041 9.49232L4.30649 9.22909L4.11324 9.04452L1.11415 6.1802L5.26845 5.58875L5.52703 5.55193L5.64452 5.31867L7.51188 1.61145L9.37924 5.31867L9.49673 5.55193L9.75531 5.58875L13.9096 6.1802L10.9105 9.04452L10.7173 9.22909L10.7633 9.49232L11.4736 13.5496L7.74084 11.6268Z"></path></symbol></defs><use href="#poly_star_fill"></use></svg>
+                    </div>
+                        <span>(43329)</span>
                 </div>
+
                 <del class="preco-antigo-produto">R$ 1.299</del>
-                <p class="preco-atual-produto">R$ 648</p>
-                <div class="metodos-pagamento-produto">
-                    <p class="destacado-verde">50% OFF no Pix ou Saldo no Mercado Pago</p>
-                    <p class="destacado-verde">10x R$ 72 sem juros</p>
-                    <p>ou R$ 720 em</p>
-                    <p><a href="#">Ver meios de pagamento e promoções</a></p>
+                <div class="infos-preco-produto">
+                    <p class="preco-atual-produto">R$ 648</p>
+                    <div class="desconto-produto">
+                        <span class="destacado-verde">50% OFF no Pix ou <br>Saldo no Mercado Pago
+                    </div>
+                </div>
+                </div>
+                <div class="parcelamento-produto">
+                    <div class="parcelamento-info-produto">
+                        <p>ou R$ 720 em</p>
+                        <p class="destacado-verde">10x R$ 72 sem juros</p>
+                    </div>
+                    <p class="meios-pagamento"><a href="#">Ver meios de pagamento e promoções</a></p>
+                </div>
                 </div>
                 <div class="opcoes-cor-produto">
-                    <p>Cor: <strong>Azul Marinho</strong></p>
-                    <div>
-                    </div>
+                </div>
                 </div>
                 <div class="opcoes-armazenamento-produto">
                     <p>Memória interna: <strong>128 GB</strong></p>
@@ -66,8 +118,8 @@
                     </div>
                 </div>
                 <div class="caracteristicas-produto">
-                    <h4>O que você precisa saber sobre este produto</h4>
-                    <ul>
+                    <p class="caracteristicas-produto-titulo">O que você precisa saber sobre este produto</p>
+                    <ul class="caracteristicas-produto-lista">
                         <li>Memória RAM: 4 GB.</li>
                         <li>Dispositivo desbloqueado para que você escolha a companhia telefônica de sua preferência.
                         </li>
@@ -79,28 +131,29 @@
             </section>
 
             <aside class="card-compra" aria-label="Informações de compra do produto">
-                <div class="tag-frete-compra">
-                    <p>FRETE GRÁTIS ACIMA DE R$ 19</p>
-                </div>
+                <p>
+                    <span class="tag-frete-compra">FRETE GRÁTIS ACIMA DE R$ 19</span>
+                </p>
                 <div class="informacoes-frete-compra">
-                    <span class="destacado-verde">Chegará grátis amanhã</span>
+                    <span class="destacado-verde"><strong>Chegará grátis amanhã</strong></span>
                     <p><strong><span class="destacado-verde">Retire grátis</span></strong> a partir de sexta-feira em
-                        uma
-                        agência Mercado Livre</p>
+                        uma agência Mercado Livre</p>
                     <p><a href="#">Ver no mapa</a></p>
                 </div>
                 <div class="envio-frete-compra">
-                    <p>Estoque disponível</p>
-                    <p>Armazenado e enviado pelo <img src="assets/images/full.svg" alt=""></p>
+                    <p><strong>Estoque disponível</strong></p>
+                    <div class="envio-full">
+                    <p>Armazenado e enviado pelo</p><img src="assets/images/full.svg" alt="Mercado Livre Full">
+                    </div>
                 </div>
                 <div class="quantidade-compra">
                     <label for="quantidade">Quantidade:</label>
                     <select id="quantidade" name="quantidade">
-                        <option value="1 unidade">1 unidade</option>
-                        <option value="2 unidades">2 unidades</option>
-                        <option value="3 unidades">3 unidades</option>
-                        <option value="4 unidades">4 unidades</option>
-                        <option value="5 unidades">5 unidades</option>
+                        <option value="1">1 unidade</option>
+                        <option value="2">2 unidades</option>
+                        <option value="3">3 unidades</option>
+                        <option value="4">4 unidades</option>
+                        <option value="5">5 unidades</option>
                     </select>
                     (+50 disponíveis)
                 </div>
@@ -108,28 +161,36 @@
                     <button type="button" class="botao-compra">Comprar agora</button>
                 </div>
                 <div class="add-carrinho-compra">
-                    <button type="button" class="botao-add-carrinho-compra"><img src="assets/images/shopping-cart.svg"
-                            alt="">Adicionar ao carrinho</button>
+                    <button type="button" class="botao-add-carrinho-compra">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="Interface / Shopping_Cart_02">
+                                <path id="Vector"
+                                    d="M3 3H3.26835C3.74213 3 3.97943 3 4.17267 3.08548C4.34304 3.16084 4.48871 3.28218 4.59375 3.43604C4.71269 3.61026 4.75564 3.8429 4.84137 4.30727L7.00004 16L17.4218 16C17.875 16 18.1023 16 18.29 15.9199C18.4559 15.8492 18.5989 15.7346 18.7051 15.5889C18.8252 15.4242 18.8761 15.2037 18.9777 14.7631L18.9785 14.76L20.5477 7.95996L20.5481 7.95854C20.7023 7.29016 20.7796 6.95515 20.6947 6.69238C20.6202 6.46182 20.4635 6.26634 20.2556 6.14192C20.0184 6 19.6758 6 18.9887 6H5.5M18 21C17.4477 21 17 20.5523 17 20C17 19.4477 17.4477 19 18 19C18.5523 19 19 19.4477 19 20C19 20.5523 18.5523 21 18 21ZM8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20C9 20.5523 8.55228 21 8 21Z"
+                                    stroke="var(--cor-primaria)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                        </svg>Adicionar ao carrinho
+                    </button>
                 </div>
                 <div class="loja-compra">
                     <img src="assets/images/moto.png" alt="Logo da Motorola">
-                    <p><a href="#">Loja oficial <strong>Motorola</strong></a></p>
-                    <p>Vendido por</p>
-                    <p><a href="#">Mercado Livre Eletronicos</a></p>
-                    <p><strong>+1 M vendas</strong></p>
+                    <div class="descricao-loja-compra">
+                        <p>Loja oficial <strong>Motorola</strong></a></p>
+                        <p>Vendido por</p>
+                        <p class="link"><a href="#">Mercado Livre Eletronicos</a></p>
+                        <p><strong><span class="destaque-vendas">+1 M vendas</span></strong></p>
+                    </div>
                 </div>
                 <div class="garantia-compra">
                     <p><img src="assets/images/back.svg" alt=""><a href="#">Devolução
                             grátis.</a> Você tem 30 dias a partir da data de recebimento.</p>
                     <p><img src="assets/images/check-shield.svg" alt=""><a href="#">Compra garantida.</a> Receba o
-                        produto que está esperando ou
-                        devolvemos o dinheiro.</p>
-                    <p><img src="assets/images/ribbon.svg" alt=""><a href="#">12
-                            meses de garantia de fábrica.</a></p>
+                        produto que está esperando ou devolvemos o dinheiro.</p>
+                    <p><img src="assets/images/ribbon.svg" alt=""><a href="#">12 meses de garantia de fábrica.</a></p>
                 </div>
                 <div class="lista-compra">
-                    <p><a href="#"><img src="assets/images/add-list.svg" alt="">Adicionar a uma
-                            lista</a></p>
+                    <p><a href="#"><img src="assets/images/add-list.svg" alt="">Adicionar a uma lista</a></p>
                 </div>
             </aside>
         </article>
