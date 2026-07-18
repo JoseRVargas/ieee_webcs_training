@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smartphone Motorola Moto G06 - E-commerce</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +30,9 @@
         <article class="produto">
             <section class="galeria-produto" aria-label="Galeria de imagens do produto">
                 <div class="galeria">
-                    <img src="assets/images/cor-azul-marinho.png"
+                    <img 
+                        id="imagem-principal"
+                        src="assets/images/cor-azul-marinho.png"
                         alt="Parte traseira e frontal do Smartphone Motorola Moto G06 na cor Azul Marinho">
                 </div>
             </section>
@@ -97,10 +107,10 @@
                 <div class="infos-preco-produto">
                     <p class="preco-atual-produto">R$ 648</p>
                     <div class="desconto-produto">
-                        <span class="destacado-verde">50% OFF no Pix ou <br>Saldo no Mercado Pago
+                        <span class="destacado-verde">50% OFF no Pix ou <br>Saldo no Mercado Pago</span>
                     </div>
                 </div>
-                </div>
+                
                 <div class="parcelamento-produto">
                     <div class="parcelamento-info-produto">
                         <p>ou R$ 720 em</p>
@@ -108,13 +118,91 @@
                     </div>
                     <p class="meios-pagamento"><a href="#">Ver meios de pagamento e promoções</a></p>
                 </div>
-                </div>
                 <div class="opcoes-cor-produto">
+                    <p>
+                        Cor: 
+                        <strong id="cor-selecionada">Azul Marinho</strong>
+                    </p>
+                    <div class="lista-cores">
+                        <button 
+                            type="button" 
+                            class="opcao-cor selecionada"
+                            data-cor="Azul Marinho"
+                            data-image="assets/images/cor-azul-marinho.png" 
+                            data-alt="Smartphone Motorola G06 na cor azul-marinho"
+                            aria-label="Selecionar cor azul-marinho"
+                            aria-pressed="true"
+                        >
+                            <img 
+                                src="assets/images/cor-azul-marinho.png"
+                                alt=""
+                            >
+                        </button>              
+                        <button
+                            type="button" 
+                            class="opcao-cor"
+                            data-cor="Azul"
+                            data-image="assets/images/cor-azul.png" 
+                            data-alt="Smartphone Motorola G06 na cor azul"
+                            aria-label="Selecionar cor azul"
+                            aria-pressed="false"
+                        >
+                        <img 
+                            src="assets/images/cor-azul.png"
+                            alt=""
+                        >
+                        </button>
+                        <button
+                            type="button"
+                            class="opcao-cor"
+                            data-cor="Bege"
+                            data-image="assets/images/cor-bege.png" 
+                            data-alt="Smartphone Motorola G06 na cor bege"
+                            aria-label="Selecionar cor bege"
+                            aria-pressed="false"
+                        >
+                        <img 
+                            src="assets/images/cor-bege.png"
+                            alt=""
+                        >
+                        </button>
+                        <button
+                            type="button" 
+                            class="opcao-cor"
+                            data-cor="Laranja"
+                            data-image="assets/images/cor-laranja.png" 
+                            data-alt="Smartphone Motorola G06 na cor laranja"
+                            aria-label="Selecionar cor laranja"
+                            aria-pressed="false"
+                        >
+                        <img 
+                            src="assets/images/cor-laranja.png"
+                            alt=""
+                        >
+                        </button>
+                        <button
+                            type="button"
+                            class="opcao-cor"
+                            data-cor="Verde"
+                            data-image="assets/images/cor-verde.png" 
+                            data-alt="Smartphone Motorola G06 na cor verde"
+                            aria-label="Selecionar cor verde"
+                            aria-pressed="false"
+                        >
+                        <img 
+                            src="assets/images/cor-verde.png"
+                            alt=""
+                        >
+                        </button>
+                    </div>
                 </div>
-                </div>
-                <div class="opcoes-armazenamento-produto">
+                
+                <div class="armazenamento-produto">
                     <p>Memória interna: <strong>128 GB</strong></p>
-                    <div>
+                    <div class="opcoes-armazenamento-produto" role="group" aria-label="Selecione a memória interna">
+                        <button type="button" class="opcao-armazenamento" data-armazenamento="64 GB" aria-pressed="false" disabled>64 GB</button>
+                        <button type="button" class="opcao-armazenamento selecionada" data-armazenamento="128 GB" aria-pressed="true">128 GB</button>
+                        <button type="button" class="opcao-armazenamento" data-armazenamento="256 GB" aria-pressed="false">256 GB</button>
                     </div>
                 </div>
                 <div class="caracteristicas-produto">
@@ -162,7 +250,6 @@
                 </div>
                 <div class="add-carrinho-compra">
                     <button type="button" class="botao-add-carrinho-compra">
-                        <?xml version="1.0" encoding="utf-8"?>
                         <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g id="Interface / Shopping_Cart_02">
@@ -176,21 +263,33 @@
                 <div class="loja-compra">
                     <img src="assets/images/moto.png" alt="Logo da Motorola">
                     <div class="descricao-loja-compra">
-                        <p>Loja oficial <strong>Motorola</strong></a></p>
+                        <p>Loja oficial <strong>Motorola</strong></p>
                         <p>Vendido por</p>
                         <p class="link"><a href="#">Mercado Livre Eletronicos</a></p>
-                        <p><strong><span class="destaque-vendas">+1 M vendas</span></strong></p>
+                        <div class="destaque-vendas">
+                        <p><strong>+1 M vendas</strong></p>
+                        </div>
                     </div>
                 </div>
                 <div class="garantia-compra">
-                    <p><img src="assets/images/back.svg" alt=""><a href="#">Devolução
-                            grátis.</a> Você tem 30 dias a partir da data de recebimento.</p>
-                    <p><img src="assets/images/check-shield.svg" alt=""><a href="#">Compra garantida.</a> Receba o
-                        produto que está esperando ou devolvemos o dinheiro.</p>
-                    <p><img src="assets/images/ribbon.svg" alt=""><a href="#">12 meses de garantia de fábrica.</a></p>
+                    <div class="garantia-item">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="ui-pdp-icon ui-pdp-icon--return ui-pdp-color--GRAY" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12"><defs><symbol id="returns"><path d="M2.474 7.2h7.225a2.7 2.7 0 1 0 0-5.4H7V.6h2.7a3.9 3.9 0 1 1 0 7.8H2.473l2.45 2.389-.839.859L.14 7.8l3.945-3.848.838.859L2.473 7.2z"></path></symbol></defs><use href="#returns"></use></svg>
+                        <p><a href="#">Devolução grátis.</a> Você tem 30 dias a partir da data de recebimento.</p>
+                    </div>
+                    <div class="garantia-item">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="ui-pdp-icon ui-pdp-icon--protected ui-pdp-color--GRAY" xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15"><defs><symbol id="protected_buy"><path fill-rule="nonzero" d="M.399 3.89v-.6h.6c1.87 0 3.76-.783 5.68-2.374l.383-.317.383.317c1.92 1.59 3.81 2.374 5.68 2.374h.6v.6c0 5.633-2.165 9.242-6.473 10.679l-.19.063-.19-.063C2.564 13.132.4 9.523.4 3.89zm6.663-1.743c-1.8 1.4-3.62 2.179-5.455 2.32.135 4.725 1.947 7.648 5.455 8.898 3.508-1.25 5.32-4.173 5.455-8.898-1.835-.141-3.656-.92-5.455-2.32zm-.905 6.477l3.191-3.582.896.798-4.02 4.513-2.472-2.377.831-.865 1.574 1.513z"></path></symbol></defs><use href="#protected_buy"></use></svg>
+                        <p><a href="#">Compra garantida.</a> Receba o
+                        produto que está esperando ou devolvemos o dinheiro.</p> 
+                    </div>
+                    <div class="garantia-item">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="ui-pdp-icon ui-pdp-icon--protected ui-pdp-color--GRAY" xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14"><defs><symbol id="warranty"><path fill-rule="nonzero" d="M5.305 10.354l-1.686 3.34-1.24-2.458H0l1.64-3.202a5.2 5.2 0 1 1 8.588.194l1.54 3.008H9.39l-1.241 2.458-1.673-3.315a5.266 5.266 0 0 1-1.171-.025zm-1.001-.237a5.201 5.201 0 0 1-1.975-1.234l-.693 1.353h1.357l.626 1.239.685-1.358zm3.192.064l.653 1.294.625-1.239h1.358l-.617-1.204a5.193 5.193 0 0 1-2.019 1.15zM6 9.2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path></symbol></defs><use href="#warranty"></use></svg>
+                        <p>12 meses de garantia de fábrica.</p>
+                    </div>  
                 </div>
+            
                 <div class="lista-compra">
-                    <p><a href="#"><img src="assets/images/add-list.svg" alt="">Adicionar a uma lista</a></p>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" width="16" height="16" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-vpp-wishlist-new-experience--desktop__icon"><path d="M11.023 5.24v7.953M15 9.216H7.048M1 9.46h2.423M1 6.231h4.308M1 3h9.692" stroke="#3483FA" stroke-width="1.2px" fill="none"></path></svg>
+                    <p><a href="#">Adicionar a uma lista</a></p>
                 </div>
             </aside>
         </article>
