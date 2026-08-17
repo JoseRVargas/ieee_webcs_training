@@ -1,6 +1,6 @@
-function Cart({ cart, totalQuantity, orderTotal, onRemove }) {
+function Cart({ cart, totalQuantity, orderTotal, onRemove, onConfirmOrder }) {
   return (
-    <aside className="rounded-xl bg-white p-6">
+    <aside className="rounded-xl bg-white p-6 lg:sticky lg:top-8">
       <h2 className="text-2xl font-bold text-brand-red">
         Your Cart ({totalQuantity})
       </h2>
@@ -46,7 +46,11 @@ function Cart({ cart, totalQuantity, orderTotal, onRemove }) {
                       aria-label={`Remove ${item.name} from cart`}
                       className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-rose-400"
                     >
-                      <img src="/images/icon-remove-item.svg" alt="" aria-hidden="true" />
+                      <img
+                        src="/images/icon-remove-item.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
                     </button>
                   </div>
                 </li>
@@ -63,23 +67,22 @@ function Cart({ cart, totalQuantity, orderTotal, onRemove }) {
           </div>
           <div className="flex items-center justify-center gap-2 rounded-lg bg-rose-50 px-4 py-4">
             <img
-                src="/images/icon-carbon-neutral.svg"
-                alt=""
-                aria-hidden="true"
-                className="h-6 w-6"
+              src="/images/icon-carbon-neutral.svg"
+              alt=""
+              aria-hidden="true"
+              className="h-6 w-6"
             />
             <p className="text-sm text-rose-900">
-                This is a{" "} 
-                <strong>carbon neutral</strong>{" "} 
-                delivery
+              This is a <strong>carbon neutral</strong> delivery
             </p>
           </div>
-            <button
-                type="button"
-                className="mt-6 w-full rounded-lg bg-brand-red px-4 py-3 text-sm font-semibold text-white transition hover:bg-brand-red/90"
-            >
-                Confirm Order
-            </button>
+          <button
+            type="button"
+            onClick={onConfirmOrder}
+            className="mt-6 w-full rounded-lg bg-brand-red px-4 py-3 text-sm font-semibold text-white transition hover:bg-brand-red/90"
+          >
+            Confirm Order
+          </button>
         </div>
       )}
     </aside>
