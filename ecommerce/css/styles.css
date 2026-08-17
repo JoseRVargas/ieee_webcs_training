@@ -33,7 +33,7 @@ main {
 
 .produto {
     display: grid;
-    grid-template-columns: 35fr 37fr 28fr;
+    grid-template-columns: 37fr 35fr 28fr;
     gap: 20px;
     width: 100%;
     margin: 0 auto;
@@ -384,7 +384,6 @@ button, select {
 .card-compra p {
     margin: 0;
     margin-block-end: 0px;
-    padding-bottom: 10px;
 }
 
 .tag-frete-compra {
@@ -395,33 +394,108 @@ button, select {
     border-radius: 3px;
 }
 
+.informacoes-frete-compra {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.informacoes-frete-compra p {
+    margin-bottom: 10px;
+}
+
+.informacoes-frete-compra p {
+    margin-block-end: 0px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.mapa {
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.mapa p {
+    padding: 0;
+}
+
 .envio-frete-compra {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    font-size: 14px;
 }
 
 .envio-frete-compra p {
-    margin-block-end: 0px;
+    padding-bottom: 0px;
+}
+
+.estoque {
     font-size: 14px;
-    color: #000000;
+    margin-bottom: 0px;
+}
+
+.estoque p {
     margin: 0;
+    margin-block-end: 0px;
     padding: 0;
 }
 
 .envio-full {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 0px;
+    gap: 5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
     padding: 0;
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
 }
 
 .envio-full img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 20px;
     object-fit: contain;
+}
+
+.quantidade-compra {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 14px;
+}
+
+.quantidade-dropdown {
+    position: relative;
+}
+
+.quantidade-compra select {
+    width: 40%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 0px;
+    appearance: none;
+    background-color: var(--cor-fundo-produto);
+    cursor: pointer;
+}
+
+.ui-review-capability-dropdown__chevron {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 12px;
+    height: 12px;
+    stroke: var(--cor-primaria);
+    stroke-width: 2px;
 }
 
 .compra {
@@ -435,7 +509,7 @@ button, select {
 .botao-compra {
     background-color: var(--cor-primaria);
     color: #ffffff;
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 20px;
     border-radius: 4px;
     border: none;
@@ -450,7 +524,7 @@ button, select {
 .botao-add-carrinho-compra {
     background-color: #e3edfb;
     color: var(--cor-primaria);
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 20px;
     border-radius: 4px;
     border: none;

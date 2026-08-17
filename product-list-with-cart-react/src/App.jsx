@@ -2,9 +2,11 @@ import { useState } from "react";
 import products from "./data/data.json";
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
+import OrderModal from "./components/OrderModal";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
   const orderTotal = cart.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -59,13 +61,26 @@ function App() {
     );
   }
 
+  function confirmOrder() {
+    if (cart.length === 0) {
+      return;
+    }
+
+    setIsOrderConfirmed(true);
+  }
+
+  function startNewOrder() {
+    setCart([]);
+    setIsOrderConfirmed(false);
+  }
+
   console.log(cart);
   return (
+    <>
     <main className="min-h-screen bg-rose-50 px-6 py-8">
-      <div className="mx-auto max-w-7xl">
-        <h1 className="mb-8 text-4xl font-bold text-rose-900">Desserts</h1>
-
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-start">
         <section>
+          <h1 className="mb-8 text-4xl font-bold text-rose-900">Desserts</h1>
           <ProductList
             products={products}
             cart={cart}
@@ -74,14 +89,24 @@ function App() {
             onDecrement={decrementItem}
           />
         </section>
-        <Cart 
+        <Cart
           cart={cart}
           totalQuantity={totalQuantity}
           orderTotal={orderTotal}
-          onRemove={removeItem} 
-          />
+          onRemove={removeItem}
+          onConfirmOrder={confirmOrder}
+        />
       </div>
     </main>
+    
+    {isOrderConfirmed && (
+        <OrderModal
+          cart={cart}
+          orderTotal={orderTotal}
+          onStartNewOrder={startNewOrder}
+        />
+    )}
+    </>
   );
 }
 
