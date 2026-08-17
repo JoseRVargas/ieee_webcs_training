@@ -74,38 +74,47 @@ function App() {
     setIsOrderConfirmed(false);
   }
 
+  function closeOrderConfirmation() {
+    setIsOrderConfirmed(false);
+  }
+
   console.log(cart);
   return (
     <>
-    <main className="min-h-screen bg-rose-50 px-6 py-8">
-      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-start">
-        <section>
-          <h1 className="mb-8 text-4xl font-bold text-rose-900">Desserts</h1>
-          <ProductList
-            products={products}
+      <main
+        className="min-h-screen bg-rose-50 px-6 py-8"
+        inert={isOrderConfirmed}
+        aria-hidden={isOrderConfirmed ? "true" : undefined}
+      >
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(0,1fr)_24rem] lg:items-start">
+          <section>
+            <h1 className="mb-8 text-4xl font-bold text-rose-900">Desserts</h1>
+            <ProductList
+              products={products}
+              cart={cart}
+              onAddToCart={addToCart}
+              onIncrement={incrementItem}
+              onDecrement={decrementItem}
+            />
+          </section>
+          <Cart
             cart={cart}
-            onAddToCart={addToCart}
-            onIncrement={incrementItem}
-            onDecrement={decrementItem}
+            totalQuantity={totalQuantity}
+            orderTotal={orderTotal}
+            onRemove={removeItem}
+            onConfirmOrder={confirmOrder}
           />
-        </section>
-        <Cart
-          cart={cart}
-          totalQuantity={totalQuantity}
-          orderTotal={orderTotal}
-          onRemove={removeItem}
-          onConfirmOrder={confirmOrder}
-        />
-      </div>
-    </main>
-    
-    {isOrderConfirmed && (
+        </div>
+      </main>
+
+      {isOrderConfirmed && (
         <OrderModal
           cart={cart}
           orderTotal={orderTotal}
+          onClose={closeOrderConfirmation}
           onStartNewOrder={startNewOrder}
         />
-    )}
+      )}
     </>
   );
 }
